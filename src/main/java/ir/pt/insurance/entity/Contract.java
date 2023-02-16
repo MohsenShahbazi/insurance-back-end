@@ -2,12 +2,11 @@ package ir.pt.insurance.entity;
 import ir.pt.core.repository.BaseEntity;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Entity
-@Table(name = "Contracts")
-@SequenceGenerator(name = "id_Sequence", sequenceName = "Contracts_SEQ", allocationSize = 1)
-public class Contracts extends BaseEntity {
+@Table(name = "Contract")
+@SequenceGenerator(name = "id_Sequence", sequenceName = "Contract_SEQ", allocationSize = 1)
+public class Contract extends BaseEntity {
 
     @Column(name = "name")
     private String name;

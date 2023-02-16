@@ -8,6 +8,10 @@ import java.io.Serializable;
 
 @Setter
 @Getter
-public class CityModel extends BaseModel implements Serializable {
+public class ContractModel extends BaseModel {
     private String name;
+    private String code;
+    private String dateRange;
+    private String startDate;
+    private String endDate;
 }

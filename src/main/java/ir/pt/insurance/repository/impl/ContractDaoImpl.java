@@ -1,10 +1,12 @@
-package ir.pt.trip.repository.impl;
+package ir.pt.insurance.repository.impl;
 
 
 import ir.pt.core.repository.BaseDAOImpl;
-import ir.pt.trip.entity.City;
-import ir.pt.trip.model.FilterModel;
-import ir.pt.trip.repository.CityDao;
+import ir.pt.insurance.entity.City;
+import ir.pt.insurance.entity.Contract;
+import ir.pt.insurance.model.FilterModel;
+import ir.pt.insurance.repository.CityDao;
+import ir.pt.insurance.repository.ContractDao;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.Query;
@@ -12,7 +14,7 @@ import java.util.List;
 
 
 @Repository
-public class CityDaoImpl extends BaseDAOImpl<City> implements CityDao {
+public class ContractDaoImpl extends BaseDAOImpl<Contract> implements ContractDao {
 
     @Override
     public List<City> getList(FilterModel filter) {

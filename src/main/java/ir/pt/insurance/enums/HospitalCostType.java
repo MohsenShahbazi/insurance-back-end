@@ -1,50 +1,50 @@
-package ir.pt.insurance.enums;
+package ir.pt.insurance.enums;//package ir.pt.insurance.enums;
 
-/**
- * Created by Ahangari on 04/08/2019.
- */
-public enum Membership {
-    Aja(1) {
+public enum HospitalCostType {
+    Chemotherapy(1) {
         @Override
         public String getTitle() {
-            return "ارتش";
+
+            return "شیمی درمانی";
         }
     },
-    Naja(2) {
+    ChemotherapyDrug(2) {
         @Override
         public String getTitle() {
-            return "ناجا";
+            return "داروی شیمی درمانی";
         }
     },
-    Sepah(3) {
+    IntraocularInjection(3) {
         @Override
         public String getTitle() {
-            return "سپاه";
+            return "تزریق داخل چشم";
         }
     },
-    Vedja(4) {
+
+    Cataract(4) {
         @Override
         public String getTitle() {
-            return "ودجا";
+            return "آب مروارید";
         }
     },
-    Setad(5) {
+
+    Ambulance(5) {
         @Override
         public String getTitle() {
-            return "ستاد کل";
+            return "آمبولانس";
         }
     },
-    Unknown(6) {
+
+    other(6) {
         @Override
         public String getTitle() {
-            return "ناشناس";
+            return "سایر";
         }
     };
 
-
     private final int value;
 
-    Membership(int value) {
+    HospitalCostType(int value) {
         this.value = value;
     }
 

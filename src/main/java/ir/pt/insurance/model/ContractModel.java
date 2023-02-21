@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 @Setter
 @Getter
-public class ContractModel extends BaseModel {
+public class ContractModel extends BaseModel implements Serializable {
     private String name;
     private String code;
     private String dateRange;

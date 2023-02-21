@@ -10,4 +10,5 @@ import java.io.Serializable;
 @Getter
 public class CityModel extends BaseModel implements Serializable {
     private String name;
+    private ProvinceModel province;
 }

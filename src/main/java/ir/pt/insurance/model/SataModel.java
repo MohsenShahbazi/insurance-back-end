@@ -14,7 +14,7 @@ import java.io.Serializable;
 
 @Setter
 @Getter
-public class SataModel extends BaseModel implements Serializable {
+public class SataModel extends BaseModel {
 
     private Long indicator;
     private String name;

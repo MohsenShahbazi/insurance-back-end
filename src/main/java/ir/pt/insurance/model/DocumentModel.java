@@ -9,7 +9,7 @@ import java.io.Serializable;
 
 @Setter
 @Getter
-public class DocumentModel extends BaseModel implements Serializable {
+public class DocumentModel extends BaseModel  {
 
     private String title;
     private String description;

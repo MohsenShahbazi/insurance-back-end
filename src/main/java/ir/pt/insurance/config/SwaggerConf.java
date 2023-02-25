@@ -3,6 +3,7 @@ package ir.pt.insurance.config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -28,14 +29,16 @@ public class SwaggerConf {
     @Bean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
+                .forCodeGeneration(true)
+                .genericModelSubstitutes(ResponseEntity.class)
                 .select()
-                .apis(RequestHandlerSelectors.any())
+                .apis(RequestHandlerSelectors.basePackage("ir.pt.insurance.controller"))
                 .paths(PathSelectors.any())
-                .build();
+                .build().enableUrlTemplating(true);
     }
 
-   /* @Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+
+ /*   public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("swagger-ui.html")
                 .addResourceLocations("classpath:/META-INF/resources/");
 
@@ -44,7 +47,7 @@ public class SwaggerConf {
     }*/
 
 
-    /*    @Bean
+   /* @Bean
     public Docket api() {
         if (Boolean.parseBoolean("true")) {
             return new Docket(DocumentationType.SWAGGER_2)

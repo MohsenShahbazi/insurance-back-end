@@ -17,8 +17,8 @@ public class SentDocumentController extends BaseController<SentDocumentListModel
     SentDocumentListService sentDocumentListService;
 
 
-    protected SentDocumentController(SentDocumentListService service) {
-        super(service);
+    protected SentDocumentController(SentDocumentListService sentDocumentListService) {
+        super(sentDocumentListService);
     }
 
 }

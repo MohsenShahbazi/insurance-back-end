@@ -2,11 +2,10 @@ package ir.pt.insurance.entity;
 
 import ir.pt.core.repository.BaseEntity;
 import lombok.Data;
+import org.hibernate.annotations.Filter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.SequenceGenerator;
-import javax.persistence.Table;
+import javax.persistence.*;
+
 @Entity
 @Table(name = "Sata")
 @SequenceGenerator(name = "id_Sequence", sequenceName = "Sata_SEQ", allocationSize = 1)
@@ -19,11 +18,15 @@ public class Sata extends BaseEntity {
     @Column(name = "name")
     private String  name;
 
-    @Column(name = "province")
-    private Long provincer;
+    @ManyToOne(cascade = {CascadeType.ALL})
+    @JoinColumn(name = "province", referencedColumnName = "ID")
+    @Filter(name = "dataStateFilter", condition = "dataState=0")
+    private Province province;
 
-    @Column(name = "city")
-    private Long city;
+    @ManyToOne(cascade = {CascadeType.ALL})
+    @JoinColumn(name = "city", referencedColumnName = "ID")
+    @Filter(name = "dataStateFilter", condition = "dataState=0")
+    private City city;
 
     @Column(name = "telephone")
     private String telephone;

@@ -17,8 +17,8 @@ public class SataController extends BaseController<SataModel> {
     SataService sataService;
 
 
-    protected SataController(SataService service) {
-        super(service);
+    protected SataController(SataService sataService) {
+        super(sataService);
     }
 
 }

@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 @Setter
 @Getter
-public class CityModel extends BaseModel implements Serializable {
+public class CityModel extends BaseModel {
     private String name;
     private ProvinceModel province;
 }

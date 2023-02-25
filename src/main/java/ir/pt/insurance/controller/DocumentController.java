@@ -22,8 +22,8 @@ public class DocumentController extends BaseController<DocumentModel> {
     DocumentService documentService;
 
 
-    protected DocumentController(DocumentService service) {
-        super(service);
+    protected DocumentController(DocumentService documentService) {
+        super(documentService);
     }
 
 }

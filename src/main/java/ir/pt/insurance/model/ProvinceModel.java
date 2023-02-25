@@ -15,6 +15,6 @@ import java.io.Serializable;
 @Setter
 @Getter
 
-public class ProvinceModel extends BaseModel implements Serializable {
+public class ProvinceModel extends BaseModel {
     private String name;
 }

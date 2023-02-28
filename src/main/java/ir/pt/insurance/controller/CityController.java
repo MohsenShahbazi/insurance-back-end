@@ -25,7 +25,7 @@ public class CityController extends  BaseController<CityModel> {
     }
 
 
-    @PostMapping(value = "/get")
+ /*   @PostMapping(value = "/get")
     public ResponseEntity<JPresent> select(@RequestParam("id") Long id) {
         try {
             return jPresent.getResponse(new JDataModel(service.get(id)));
@@ -34,5 +34,5 @@ public class CityController extends  BaseController<CityModel> {
         } catch (Exception ex) {
             return jPresent.getResponse(ex);
         }
-    }
+    }*/
 }

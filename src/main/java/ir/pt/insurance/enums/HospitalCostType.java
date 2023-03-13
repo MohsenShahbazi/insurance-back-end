@@ -1,4 +1,4 @@
-package ir.pt.insurance.enums;//package ir.pt.insurance.enums;
+package ir.pt.insurance.enums;
 
 public enum HospitalCostType {
     Chemotherapy(1) {

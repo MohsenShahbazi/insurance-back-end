@@ -2,10 +2,13 @@ package ir.pt.insurance.entity;
 
 import ir.pt.core.repository.BaseEntity;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.Filter;
 
 import javax.persistence.*;
-
+@Setter
+@Getter
 @Entity
 @Table(name = "Sata")
 @SequenceGenerator(name = "id_Sequence", sequenceName = "Sata_SEQ", allocationSize = 1)

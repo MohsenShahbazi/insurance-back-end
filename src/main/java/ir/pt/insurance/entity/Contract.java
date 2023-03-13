@@ -1,8 +1,12 @@
 package ir.pt.insurance.entity;
 import ir.pt.core.repository.BaseEntity;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 
+@Setter
+@Getter
 @Entity
 @Table(name = "Contract")
 @SequenceGenerator(name = "id_Sequence", sequenceName = "Contract_SEQ", allocationSize = 1)

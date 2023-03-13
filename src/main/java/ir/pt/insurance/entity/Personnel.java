@@ -3,10 +3,13 @@ package ir.pt.insurance.entity;
 import ir.pt.core.repository.BaseEntity;
 import ir.pt.insurance.enums.Gender;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.Filter;
 
 import javax.persistence.*;
-
+@Setter
+@Getter
 @Entity
 @Table(name = "Personnel")
 @SequenceGenerator(name = "id_Sequence", sequenceName = "Personnel_SEQ", allocationSize = 1)

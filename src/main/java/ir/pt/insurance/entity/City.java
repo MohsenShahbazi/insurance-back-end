@@ -10,6 +10,8 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 
+@Setter
+@Getter
 @Entity
 @Table(name = "City")
 @SequenceGenerator(name = "id_Sequence", sequenceName = "City_SEQ", allocationSize = 1)
@@ -19,7 +21,7 @@ public class City extends BaseEntity {
     private String name;
 
     @ManyToOne(cascade = {CascadeType.ALL})
-    @JoinColumn(name = "province", referencedColumnName = "ID")
+    @JoinColumn(name = "provinceId", referencedColumnName = "ID",nullable = false)
     @Filter(name = "dataStateFilter", condition = "dataState=0")
     private Province province;
 

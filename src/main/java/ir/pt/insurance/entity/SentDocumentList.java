@@ -1,9 +1,12 @@
 package ir.pt.insurance.entity;//package com.pt.bime.entity;
 
 import ir.pt.core.repository.BaseEntity;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
-
+@Setter
+@Getter
 @Entity
 @Table(name = "SentDocumentList")
 @SequenceGenerator(name = "id_Sequence", sequenceName = "SentDocumentList_SEQ", allocationSize = 1)
